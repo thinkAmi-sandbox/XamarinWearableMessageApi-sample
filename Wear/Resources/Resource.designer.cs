@@ -635,6 +635,12 @@ namespace Wear
 		public partial class Id
 		{
 			
+			// aapt resource value: 0x7f090012
+			public const int AsyncAwait = 2131296274;
+			
+			// aapt resource value: 0x7f090013
+			public const int AsyncTask = 2131296275;
+			
 			// aapt resource value: 0x7f09000a
 			public const int action_error = 2131296266;
 			
@@ -668,9 +674,6 @@ namespace Wear
 			// aapt resource value: 0x7f09000e
 			public const int message = 2131296270;
 			
-			// aapt resource value: 0x7f090012
-			public const int myButton = 2131296274;
-			
 			// aapt resource value: 0x7f090001
 			public const int none = 2131296257;
 			
@@ -686,11 +689,11 @@ namespace Wear
 			// aapt resource value: 0x7f090004
 			public const int terrain = 2131296260;
 			
-			// aapt resource value: 0x7f090014
-			public const int text = 2131296276;
+			// aapt resource value: 0x7f090015
+			public const int text = 2131296277;
 			
-			// aapt resource value: 0x7f090013
-			public const int title = 2131296275;
+			// aapt resource value: 0x7f090014
+			public const int title = 2131296276;
 			
 			// aapt resource value: 0x7f090009
 			public const int top = 2131296265;
@@ -760,6 +763,12 @@ namespace Wear
 			
 			// aapt resource value: 0x7f040021
 			public const int app_name = 2130968609;
+			
+			// aapt resource value: 0x7f040022
+			public const int async_await = 2130968610;
+			
+			// aapt resource value: 0x7f040023
+			public const int async_task = 2130968611;
 			
 			// aapt resource value: 0x7f040001
 			public const int auth_client_needs_enabling_title = 2130968577;
