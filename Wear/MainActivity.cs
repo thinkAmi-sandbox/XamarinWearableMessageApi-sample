@@ -18,10 +18,12 @@ using Android.Gms.Wearable;
 namespace Wear
 {
 	[Activity(Label = "Wear", MainLauncher = true, Icon = "@drawable/icon")]
+    [Android.App.IntentFilter(new string[] { "com.google.android.gms.wearable.BIND_LISTENER" })]
 	public class MainActivity : Activity,
 		Android.Gms.Common.Apis.IResultCallback,
 		Android.Gms.Common.Apis.IGoogleApiClientConnectionCallbacks, 
-		Android.Gms.Common.Apis.IGoogleApiClientOnConnectionFailedListener
+		Android.Gms.Common.Apis.IGoogleApiClientOnConnectionFailedListener,
+        Android.Gms.Wearable.IMessageApiMessageListener
 	{
 		Android.Gms.Common.Apis.IGoogleApiClient client;
 		private const string MessageTag = "hoge";
@@ -30,6 +32,7 @@ namespace Wear
 		// IGoogleApiClientConnectionCallbacksインタフェース向け
 		public void OnConnected(Android.OS.Bundle connectionHint)
 		{
+            Android.Gms.Wearable.WearableClass.MessageApi.AddListener (client, this);
 		}
 
 		public void OnConnectionSuspended(int cause)
@@ -45,6 +48,18 @@ namespace Wear
 		public void OnResult(Java.Lang.Object result)
 		{
 		}
+
+        // IMessageApiMessageListenerインタフェース向け
+        public void OnMessageReceived(IMessageEvent e)
+        {
+            if (MessageTag.Equals(e.Path))
+            {
+                var msg = System.Text.Encoding.UTF8.GetString(e.GetData());
+
+                this.RunOnUiThread(() =>
+                    Android.Widget.Toast.MakeText(this, msg, ToastLength.Long).Show());
+            }
+        }
 
 
 		protected override void OnCreate(Bundle bundle)
