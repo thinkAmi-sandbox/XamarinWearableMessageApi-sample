@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Wear", "Wear\Wear.csproj", "{7FAB1E58-94EF-4618-9A65-0104088A5395}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Handheld", "Handheld\Handheld.csproj", "{BC9DD409-E630-42DD-BBED-2D3EEE56C3D1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,5 +15,9 @@ Global
 		{7FAB1E58-94EF-4618-9A65-0104088A5395}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FAB1E58-94EF-4618-9A65-0104088A5395}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FAB1E58-94EF-4618-9A65-0104088A5395}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC9DD409-E630-42DD-BBED-2D3EEE56C3D1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC9DD409-E630-42DD-BBED-2D3EEE56C3D1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC9DD409-E630-42DD-BBED-2D3EEE56C3D1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC9DD409-E630-42DD-BBED-2D3EEE56C3D1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
